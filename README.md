@@ -5,7 +5,7 @@ Sistema web de pedidos de comida desarrollado para el TPI de Programación 4. In
 ## Requisitos
 
 - Python 3.11–3.13.
-- Node.js 20 o superior y npm.
+- Node.js 20 o superior y pnpm.
 - SQLite para desarrollo local o PostgreSQL 15 o superior.
 
 ## Estructura
@@ -28,20 +28,19 @@ El backend separa Router → Service → Unit of Work → Repository → Model/S
 
 ### Backend
 
-Desde la raíz del proyecto, crear el entorno virtual e instalar las dependencias:
+Desde la carpeta `backend`, crear el entorno virtual, instalar dependencias y copiar su configuración de ejemplo:
 
 ```powershell
-cd backend
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-Copy-Item ..\.env.example .env
+pip install -r requirements.txt
+Copy-Item .env.example .env
 ```
 
 La configuración inicial utiliza SQLite y crea `backend/food_store.db` al iniciar la API. Aplicar el seed:
 
 ```powershell
-python -m app.seed
+python -m app.db.seed
 ```
 
 Iniciar la API:
@@ -56,24 +55,23 @@ uvicorn app.main:app --reload
 
 ### Frontend
 
-En otra terminal, desde la raíz:
+En otra terminal, desde la carpeta `frontend`:
 
 ```powershell
-cd frontend
-npm.cmd install
+pnpm install
 Copy-Item .env.example .env.local
-npm.cmd run dev
+pnpm dev
 ```
 
 Abrir la dirección que muestre Vite, normalmente <http://localhost:5173>. Para generar el build de producción:
 
 ```powershell
-npm.cmd run build
+pnpm build
 ```
 
 ## Variables de entorno
 
-Las variables del backend se leen desde `backend/.env` (copiado desde el `.env.example` de la raíz):
+Las variables del backend se leen desde `backend/.env` (copiá `backend/.env.example`). Las variables del frontend se leen desde `frontend/.env.local` (copiá `frontend/.env.example`):
 
 | Variable | Descripción | Desarrollo |
 | --- | --- | --- |

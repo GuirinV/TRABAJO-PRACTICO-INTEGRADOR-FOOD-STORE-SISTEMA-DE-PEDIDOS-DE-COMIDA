@@ -1,11 +1,11 @@
 from sqlmodel import select
 
+from app.core.config import settings
+from app.core.database import create_db_and_tables
 from app.core.security import hash_password
 from app.core.uow import UnitOfWork
-from app.core.database import create_db_and_tables
 from app.modules.catalogo.models import Categoria, Producto
 from app.modules.usuarios.models import Usuario
-from app.core.config import settings
 
 
 def seed() -> None:
