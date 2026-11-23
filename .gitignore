@@ -1,0 +1,11 @@
+.env
+.env.*.local
+backend/.env
+backend/.venv/
+backend/*.db
+backend/app/**/__pycache__/
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.vite/
+frontend/*.tsbuildinfo
