@@ -58,16 +58,18 @@ uvicorn app.main:app --reload
 En otra terminal, desde la carpeta `frontend`:
 
 ```powershell
-pnpm install
+pnpm.cmd install
 Copy-Item .env.example .env.local
-pnpm dev
+pnpm.cmd dev
 ```
 
 Abrir la dirección que muestre Vite, normalmente <http://localhost:5173>. Para generar el build de producción:
 
 ```powershell
-pnpm build
+pnpm.cmd build
 ```
+
+En PowerShell de Windows, usar `pnpm.cmd` evita el bloqueo de ejecución de scripts que puede afectar a `pnpm.ps1`. En otras terminales se pueden ejecutar `pnpm install`, `pnpm dev` y `pnpm build` normalmente.
 
 ## Variables de entorno
 
