@@ -86,7 +86,7 @@ Las variables del backend se leen desde `backend/.env` (copiá `backend/.env.exa
 | `SEED_ADMIN_NAME` | Nombre del admin seed | `Food Store Admin` |
 | `SEED_ADMIN_EMAIL` | Email del admin seed | `admin@foodstore.local` |
 | `SEED_ADMIN_PASSWORD` | Contraseña inicial del admin | `Admin1234!` |
-| `VITE_API_URL` | URL base que usa Axios | `http://127.0.0.1:8000/api/v1` |
+| `VITE_API_URL` | URL base que usa Axios | `http://localhost:8000/api/v1` |
 
 Para PostgreSQL, configurar por ejemplo `DATABASE_URL=postgresql+psycopg2://usuario:clave@localhost:5432/food_store`. Crear previamente la base de datos. En despliegues HTTPS, configurar la cookie segura y una clave secreta fuerte.
 
