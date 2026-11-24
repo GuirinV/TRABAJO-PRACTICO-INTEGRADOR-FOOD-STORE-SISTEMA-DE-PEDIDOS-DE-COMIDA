@@ -108,6 +108,10 @@ Se pueden cambiar antes de ejecutar el seed mediante `SEED_ADMIN_EMAIL`, `SEED_A
 
 El frontend no accede al token JWT: el navegador envía la cookie `access_token` HttpOnly usando Axios con `withCredentials`.
 
+## Video de demostración
+
+[Ver el video de demostración en Google Drive](https://drive.google.com/drive/folders/1x0fSssVdGh-KQDAW1vqw6KvIBsZXAKsD?usp=drive_link)
+
 ## Repositorio
 
 URL del repositorio: <https://github.com/GuirinV/TRABAJO-PRACTICO-INTEGRADOR-FOOD-STORE-SISTEMA-DE-PEDIDOS-DE-COMIDA.git>
